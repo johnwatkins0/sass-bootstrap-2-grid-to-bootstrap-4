@@ -1,0 +1,25 @@
+@import 'node_modules/bootstrap/scss/mixins/grid';
+
+// Ensure the $grid-columns variable exists.
+$grid-columns: 12 !default;
+
+// Apply .col-12 styles to spans below the md breakpoint.
+[class*='span'] {
+  @include make-col-ready;
+  @include make-col($grid-columns);
+}
+
+// Apply .col-md-* and .offset-md-* styles above the md breakpoint.
+@include media-breakpoint-up(md) {
+  @for $i from 1 through $grid-columns {
+    .span#{$i} {
+      @include make-col($i);
+    }
+  }
+
+  @for $i from 1 through $grid-columns {
+    .offset#{$i} {
+      @include make-col-offset($i);
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "sass-bootstrap-2-grid-to-bootstrap-4",
+  "version": "1.0.0",
+  "description": "Applies Bootstrap 4's grid styles to Bootstrap 2's grid classes.",
+  "main": "scss/main.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Sass",
+    "CSS",
+    "Bootstrap"
+  ],
+  "author": "John Watkins",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.0.0-beta.2"
+  }
+}
